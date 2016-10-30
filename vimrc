@@ -74,6 +74,8 @@ Plugin '2072/vim-syntax-for-PHP.git'
 Plugin '2072/PHP-Indenting-for-VIm'
 " Support for PHP namespaces
 Plugin 'arnaud-lb/vim-php-namespace'
+" Improved PHP omni-completion
+Plugin 'shawncplus/phpcomplete.vim'
 " PHP end ---------------------------------------------------------------------
 
 " Misc ------------------------------------------------------------------------
@@ -132,6 +134,7 @@ set wildmode=list:longest
 set foldmethod=marker
 set indentexpr=
 set smartindent
+set completeopt=longest,menuone
 
 " highlight matching paranthesis etc.
 set showmatch
@@ -192,20 +195,23 @@ au BufRead,BufEnter */doc/* wincmd L
 
 " PLUGIN CONFIGURATION {{{
 
+" SuperTab --------------------------------------------------------------------
+let g:SuperTabDefaultCompletionType = '<C-x><C-o>'
+
 " Airline ---------------------------------------------------------------------
-let g:airline_powerline_fonts=1
-let g:airline_detect_modified=1
+let g:airline_powerline_fonts = 1
+let g:airline_detect_modified = 1
 " Airline theme
-let g:airline_theme='tomorrow'
+let g:airline_theme = 'tomorrow'
 " whitspace addon
-let g:airline#extensions#whitespace#enabled=1
+let g:airline#extensions#whitespace#enabled = 1
 " Enable buffer listing on top
-let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#enabled = 1
 " Show only filenames on top
-let g:airline#extensions#tabline#fnamemod=':t'
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " NERDTree --------------------------------------------------------------------
-map <C-n> :NERDTreeToggle<CR>
+map <F4> :NERDTreeToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -233,8 +239,8 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 let g:syntastic_disabled_filetypes=['phtml']
 " phpmd will be used in a CI env
 let g:syntastic_php_checkers = ['php', 'phpcs']
-nnoremap <F4> :SyntasticCheck<CR> :SyntasticToggleMode<CR>
-nnoremap <F5> :SyntasticCheck<CR>
+nnoremap <F5> :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+nnoremap <F6> :SyntasticCheck<CR>
 
 " UltiSnips
 let g:UltiSnipsListSnippets = "<M-Tab>"
@@ -355,26 +361,29 @@ nnoremap <C-l> <C-w>l
 " FILETYPE SETTINGS {{{
 
 " Indentation of these languages is fussy over tabs and spaces
-autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
-autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType xml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType pgsql setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType python setlocal ts=8 sts=8 sw=8 expandtab
-autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+au FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+au FileType php setlocal ts=4 sts=4 sw=4 expandtab
+au FileType css setlocal ts=2 sts=2 sw=2 expandtab
+au FileType html setlocal ts=2 sts=2 sw=2 expandtab
+au FileType xml setlocal ts=2 sts=2 sw=2 expandtab
+au FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+au FileType pgsql setlocal ts=2 sts=2 sw=2 expandtab
+au FileType python setlocal ts=8 sts=8 sw=8 expandtab
+au FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 
 " Git commit messages
 au Filetype gitcommit setlocal nospell textwidth=72
 
 " Configure the concealing behaviour for json files
-autocmd InsertEnter *.json setlocal conceallevel=2 concealcursor=
-autocmd InsertLeave *.json setlocal conceallevel=2 concealcursor=inc
+au InsertEnter *.json setlocal conceallevel=2 concealcursor=
+au InsertLeave *.json setlocal conceallevel=2 concealcursor=inc
 
 " associate *.phtml with html filetype
 au BufRead,BufNewFile *.phtml setfiletype php
+
+" use autocomplete with php files
+au FileType php setlocal omnifunc=phpcomplete#CompletePHP
 
 " FILETYPE SETTINSG END }}}
 

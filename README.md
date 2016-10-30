@@ -47,6 +47,7 @@ Happy Vim-ing. :)
 * Plugin '2072/vim-syntax-for-PHP.git'
 * Plugin '2072/PHP-Indenting-for-VIm'
 * Plugin 'arnaud-lb/vim-php-namespace'
+* Plugin 'shawncplus/phpcomplete.vim'
 * Plugin 'elzr/vim-json.git'
 * Plugin 'othree/html5.vim'
 * Plugin 'groenewege/vim-less'
