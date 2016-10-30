@@ -7,6 +7,7 @@ That's my personal Vim setup. Use this at your own risk. :)
 ```bash
 $ mkdir $HOME/.vim
 $ mkdir $HOME/.vim/bundle
+$ mkdir $HOME/.vim/undodir
 ```
 
 ```bash
