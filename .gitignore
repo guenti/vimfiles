@@ -1,3 +1,4 @@
-/bundle
-/undodir
-!/undodir/.gitkeep
+bundle/
+!bundle/.gitkeep
+undodir
+!undodir/.gitkeep
