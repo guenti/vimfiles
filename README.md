@@ -1,6 +1,6 @@
 # MyVim
 
-## Introdution
+## Introduction
 That's my personal Vim setup. Use this at yout own risk. :)
 
 ## Installation
