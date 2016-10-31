@@ -184,7 +184,7 @@ set smartcase " If upper case letters occur, be case insensitive
 set infercase " Infer the current case in insert completion
 set wildignore+=*.o,*.obj,*.exe,*.so,*.dll,*.pyc,.svn,.hg,.bzr,.git,
     \.sass-cache,*.class,*.scssc,*.cssc,*.lessc
-nnoremap <leader><space> :noh<CR> " Clear out the search
+nnoremap <Leader><Space> :noh<CR> " Clear out the search
 " Replace
 set gdefault " Setting the /g param to default. Less typing :)
 
@@ -213,17 +213,18 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " NERDTree --------------------------------------------------------------------
 map <F4> :NERDTreeToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=0
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Gundo -----------------------------------------------------------------------
 nnoremap <F8> :GundoToggle<CR>
 let g:gundo_prefer_python3 = 1
 
 " Fugitive --------------------------------------------------------------------
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>ge :Gedit<cr>
-nnoremap <leader>gw :Gwrite<cr>
-nnoremap <leader>gr :Gread<cr>
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>ge :Gedit<CR>
+nnoremap <Leader>gw :Gwrite<CR>
+nnoremap <Leader>gr :Gread<CR>
+nnoremap <Leader>gb :Gbrowse<CR>
 
 " Gutentags -------------------------------------------------------------------
 let g:gutentags_exclude=['*.css', '*.html', '*.js', '*.phtml']
@@ -232,7 +233,7 @@ let g:gutentags_exclude=['*.css', '*.html', '*.js', '*.phtml']
 nnoremap <F3> :TagbarToggle<CR>
 
 " Trailing whitespaces --------------------------------------------------------
-nnoremap <leader>ws ::FixWhitespace<CR>
+nnoremap <Leader>ws ::FixWhitespace<CR>
 
 " Syntastic config ------------------------------------------------------------
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
@@ -252,8 +253,8 @@ let g:UltiSnipsListSnippets = "<M-Tab>"
 
 " PDV -------------------------------------------------------------------------
 let g:pdv_template_dir = $HOME ."/.vim/templates_snip"
-autocmd BufRead,BufNewFile *.php nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
-autocmd BufRead,BufNewFile *.php inoremap <buffer> <C-p> <ESC>:call pdv#DocumentWithSnip()<CR>
+autocmd BufRead,BufNewFile *.php nnoremap <Buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
+autocmd BufRead,BufNewFile *.php inoremap <Buffer> <C-p> <ESC>:call pdv#DocumentWithSnip()<CR>
 
 " PHP namespaces --------------------------------------------------------------
 " Automatically adds the corresponding use statement for the class under the cursor.
@@ -279,7 +280,7 @@ let g:composer_cmd = "/usr/local/bin/composer"
 
 " Vim less support ------------------------------------------------------------
 " .less to .css , lessc is required.
-autocmd FileType less nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
+autocmd FileType less nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><Space>
 
 " indentLine ------------------------------------------------------------------
 let g:indentLine_faster = 1
@@ -294,10 +295,10 @@ nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
 " Disable arrow keys!
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
 
 " Open/close all folds
 map <Leader>f zR
@@ -314,41 +315,41 @@ nnoremap k gk
 map <F10> <C-]>
 
 " Using <F9> for toggle folding and in visual mode mark a fold.
-inoremap <F9> <C-O>za
+inoremap <F9> <C-o>za
 nnoremap <F9> za
-onoremap <F9> <C-C>za
+onoremap <F9> <C-c>za
 vnoremap <F9> zf
 
 " mapping <ESC> to jj in insert mode
 inoremap jj <Esc>   "<Esc> to jj
 
 " Enable customized non-visible character display
-nnoremap <leader>n :set list!<CR>
+nnoremap <Leader>n :set list!<CR>
 
 " Save file as root using sudo
 cnoremap w!! w !sudo tee % >/dev/null
 
 " Some usefull mappings for open files
-map <leader>ew :e <C-R>=expand("%:p:h") . "/" <CR>
-map <leader>es :sp <C-R>=expand("%:p:h") . "/" <CR>
-map <leader>ev :vsp <C-R>=expand("%:p:h") . "/" <CR>
+map <Leader>ew :e <C-r>=expand("%:p:h") . "/" <CR>
+map <Leader>es :sp <C-r>=expand("%:p:h") . "/" <CR>
+map <Leader>ev :vsp <C-r>=expand("%:p:h") . "/" <CR>
 
 " Open a new empty buffer
-nnoremap <leader>bu :enew<CR>
+nnoremap <Leader>bu :enew<CR>
 " Move to the next buffer
-nnoremap <leader>nb :bnext<CR>
+nnoremap <Leader>nb :bnext<CR>
 " Move to the previous buffer
-nnoremap <leader>pb :bprevious<CR>
+nnoremap <Leader>pb :bprevious<CR>
 " Close the current buffer and move to the prevoius one
-nnoremap <leader>db :bp <BAR> bd #<CR>
+nnoremap <Leader>db :bp <BAR> bd #<CR>
 " Show all open buffers (it's more consistent)
-nnoremap <leader>lb :ls<CR>
+nnoremap <Leader>lb :ls<CR>
 
 " Open an new (empty) vertical split window and switch over to it.
-nnoremap <leader>sw :botright vnew<CR><C-w>l
+nnoremap <Leader>sw :botright vnew<CR><C-w>l
 
 " Mapping fold tag (usefull with HTML/XML and so on)
-nnoremap <leader>ft Vatzf
+nnoremap <Leader>ft Vatzf
 
 " Moving around split windows
 nnoremap <C-h> <C-w>h
