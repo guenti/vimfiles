@@ -321,7 +321,8 @@ onoremap <F9> <C-c>za
 vnoremap <F9> zf
 
 " mapping <ESC> to jj in insert mode
-inoremap jj <Esc>   "<Esc> to jj
+inoremap jj <Esc>
+vnoremap jj <ESC>
 
 " Enable customized non-visible character display
 nnoremap <Leader>n :set list!<CR>
