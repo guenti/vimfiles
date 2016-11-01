@@ -121,7 +121,6 @@ set laststatus=2
 set backspace=indent,eol,start
 set showcmd
 set showmode
-set number
 set hidden
 set modeline
 set wrap linebreak nolist
@@ -135,6 +134,8 @@ set foldmethod=marker
 set indentexpr=
 set smartindent
 set completeopt=longest,menuone
+
+set number
 
 " highlight matching paranthesis etc.
 set showmatch
@@ -299,13 +300,21 @@ nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+vnoremap <Up> <NOP>
+vnoremap <Down> <NOP>
+vnoremap <Left> <NOP>
+vnoremap <Right> <NOP>
 
 " Open/close all folds
-map <Leader>f zR
-map <Leader>cf zM
+nnoremap <Leader>f zR
+nnoremap <Leader>cf zM
 
 " Toggle line numbers
-map <Leader># :set nu!<CR>
+nnoremap <Leader># :set nu!<CR>
 
 " Movement by file line instead of screen line
 nnoremap j gj
@@ -322,7 +331,6 @@ vnoremap <F9> zf
 
 " mapping <ESC> to jj in insert mode
 inoremap jj <Esc>
-vnoremap jj <ESC>
 
 " Enable customized non-visible character display
 nnoremap <Leader>n :set list!<CR>
