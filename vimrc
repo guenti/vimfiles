@@ -138,8 +138,9 @@ set foldmethod=marker
 set indentexpr=
 set smartindent
 set completeopt=longest,menuone
-
 set number
+set splitbelow
+set splitright
 
 " highlight matching paranthesis etc.
 set showmatch

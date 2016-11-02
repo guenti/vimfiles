@@ -5,5 +5,5 @@
  * @see {{name}}{{/parent}}{{#abstract}}
  * @abstract{{/abstract}}{{#final}}
  * @final{{/final}}
- * @author Mario Günterberg <mario.guenterberg@googlemail.com>
+ * @author Mario Günterberg <mg@poolbyte-solutions.de>
  */
