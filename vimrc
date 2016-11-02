@@ -35,6 +35,8 @@ Plugin 'jistr/vim-nerdtree-tabs'
 " UI end ----------------------------------------------------------------------
 
 " Tools -----------------------------------------------------------------------
+" Required by pdv
+Plugin 'tobyS/vmustache.git'
 " git support
 Plugin 'tpope/vim-fugitive'
 " Git syntax
@@ -49,8 +51,6 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 " UltiSnips
 Plugin 'SirVer/ultisnips'
-" Required by PDV
-Plugin 'tobyS/vmustache.git'
 " Tagbar
 Plugin 'majutsushi/tagbar.git'
 " Another (better) tag plugin
@@ -66,8 +66,6 @@ Plugin 'jiangmiao/auto-pairs'
 " Tools end -------------------------------------------------------------------
 
 " PHP -------------------------------------------------------------------------
-" PHPDocBlock generator
-Plugin 'tobyS/pdv.git'
 " PHP composer support for Vim
 Plugin 'vim-php/vim-composer'
 " PHPUnit support for Vim
@@ -80,6 +78,8 @@ Plugin '2072/PHP-Indenting-for-VIm'
 Plugin 'arnaud-lb/vim-php-namespace'
 " Improved PHP omni-completion
 Plugin 'shawncplus/phpcomplete.vim'
+" PDV
+Plugin 'tobyS/pdv'
 " PHP end ---------------------------------------------------------------------
 
 " Misc ------------------------------------------------------------------------
@@ -257,11 +257,6 @@ let g:UltiSnipsSnippetDirectories = ["ultisnippets"]
 let g:UltiSnipsExpandTrigger = "<Tab>"
 let g:UltiSnipsListSnippets = "<M-Tab>"
 
-" PDV -------------------------------------------------------------------------
-let g:pdv_template_dir = $HOME ."/.vim/templates_snip"
-autocmd BufRead,BufNewFile *.php nnoremap <Buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
-autocmd BufRead,BufNewFile *.php inoremap <Buffer> <C-p> <ESC>:call pdv#DocumentWithSnip()<CR>
-
 " PHP namespaces --------------------------------------------------------------
 " Automatically adds the corresponding use statement for the class under the cursor.
 function! IPhpInsertUse()
@@ -291,6 +286,10 @@ autocmd FileType less nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><Space
 " indentLine ------------------------------------------------------------------
 let g:indentLine_faster = 1
 
+" PDV -------------------------------------------------------------------------
+let g:pdv_template_dir = $HOME ."/.vim/templates_snip"
+map <C-P> :call pdv#DocumentWithSnip()<CR>
+
 " PLUGIN CONFIGURATION END }}}
 
 " MAPPINGS {{{
@@ -305,14 +304,6 @@ nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
-inoremap <Up> <NOP>
-inoremap <Down> <NOP>
-inoremap <Left> <NOP>
-inoremap <Right> <NOP>
-vnoremap <Up> <NOP>
-vnoremap <Down> <NOP>
-vnoremap <Left> <NOP>
-vnoremap <Right> <NOP>
 
 " Open/close all folds
 nnoremap <Leader>f zR
