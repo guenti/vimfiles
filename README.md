@@ -1,7 +1,8 @@
-# MyVim
+# My Vim configuration
 
 ## Introduction
-That's my personal Vim setup. Use this at your own risk. :)
+Mainly I use Vim for PHP/SQL coding.
+That's my personal Vim setup with many PHP related Plugins.
 
 ## Installation
 ```bash
@@ -15,6 +16,7 @@ $ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```bash
 $ vim +PluginInstall +qall
 ```
+Install one of the [Fonts](https://github.com/ryanoasis/nerd-fonts.git) as recommended for NerdTree and Vim-Airline.
 
 Happy Vim-ing. :)
 
