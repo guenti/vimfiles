@@ -13,8 +13,12 @@ Plugin 'VundleVim/Vundle.vim'
 " PLUGINS {{{
 
 " Colors begin ----------------------------------------------------------------
+"The stunning, awesome, greatest of all: Solarized. :)
+Plugin 'altercation/vim-colors-solarized.git'
 " The awesome Darcula colorscheme
 Plugin 'blueshirts/darcula'
+" The material theme
+Plugin 'jdkanani/vim-material-theme'
 " Colors end ------------------------------------------------------------------
 
 " UI --------------------------------------------------------------------------
@@ -155,8 +159,9 @@ set expandtab
 retab
 
 set t_Co=256
-set background=dark
-colorscheme darcula
+"let g:solarized_termcolors=256
+set background=light
+colorscheme solarized
 
 " no backups
 set nobackup
@@ -203,7 +208,7 @@ let g:SuperTabDefaultCompletionType = '<C-x><C-o>'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_modified = 1
 " Airline theme
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'solarized'
 " whitspace addon
 let g:airline#extensions#whitespace#enabled = 1
 " Enable buffer listing on top

@@ -21,6 +21,8 @@ Install one of the [Fonts](https://github.com/ryanoasis/nerd-fonts.git) as recom
 Happy Vim-ing. :)
 
 ## Plugins included
+* Plugin 'altercation/vim-colors-solarized.git'
+* Plugin 'jdkanani/vim-material-theme'
 * Plugin 'blueshirts/darcula'
 * Plugin 'vim-airline/vim-airline'
 * Plugin 'vim-airline/vim-airline-themes'
