@@ -44,8 +44,6 @@ Happy Vim-ing. :)
 * Plugin 'ryanoasis/indentLine.git'
 * Plugin 'jiangmiao/auto-pairs'
 * Plugin 'tobyS/pdv.git'
-* Plugin 'vim-php/vim-composer'
-* Plugin 'c9s/phpunit.vim'
 * Plugin '2072/vim-syntax-for-PHP.git'
 * Plugin '2072/PHP-Indenting-for-VIm'
 * Plugin 'arnaud-lb/vim-php-namespace'
