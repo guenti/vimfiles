@@ -2,7 +2,8 @@
 set noguipty
 
 " set the X11 font to use
-set gfn=Monaco\ for\ Powerline\ Nerd\ Font\ Complete:h14
+"set gfn=Monaco\ for\ Powerline\ Nerd\ Font\ Complete:h14
+set gfn=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h14
 
 " Remove toolbar
 set guioptions-=T

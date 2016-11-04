@@ -54,5 +54,3 @@ Happy Vim-ing. :)
 * Plugin 'groenewege/vim-less'
 * Plugin 'pangloss/vim-javascript'
 * Plugin 'hail2u/vim-css3-syntax.git'
-* Plugin 'lervag/vimtex'
-* Plugin 'ryanoasis/vim-devicons'

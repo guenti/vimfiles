@@ -91,8 +91,6 @@ Plugin 'groenewege/vim-less'
 Plugin 'pangloss/vim-javascript'
 " Add CSS3 syntax support to Vim's built-in syntax/css.vim.
 Plugin 'hail2u/vim-css3-syntax.git'
-" LaTeX support
-Plugin 'lervag/vimtex'
 " Misc end --------------------------------------------------------------------
 
 " !!!Always load this Plugin at least!!!
