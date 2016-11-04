@@ -79,6 +79,8 @@ Plugin 'tobyS/pdv'
 " PHP end ---------------------------------------------------------------------
 
 " Misc ------------------------------------------------------------------------
+" EditorConfig support (Install the editorconfig-core first!)
+Plugin 'editorconfig/editorconfig-vim'
 " Better JSON file syntax
 Plugin 'elzr/vim-json.git'
 " HTML5 syntax
@@ -283,6 +285,9 @@ let g:indentLine_faster = 1
 " PDV -------------------------------------------------------------------------
 let g:pdv_template_dir = $HOME ."/.vim/templates_snip"
 map <C-P> :call pdv#DocumentWithSnip()<CR>
+
+" EditorConfig support
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " PLUGIN CONFIGURATION END }}}
 
