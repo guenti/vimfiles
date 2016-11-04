@@ -66,10 +66,6 @@ Plugin 'jiangmiao/auto-pairs'
 " Tools end -------------------------------------------------------------------
 
 " PHP -------------------------------------------------------------------------
-" PHP composer support for Vim
-Plugin 'vim-php/vim-composer'
-" PHPUnit support for Vim
-Plugin 'c9s/phpunit.vim'
 " Better syntax file
 Plugin '2072/vim-syntax-for-PHP.git'
 " A newer indet file fpr PHP
@@ -276,9 +272,6 @@ autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 " Sort existing use statements alphabetically
 autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUse()<CR>
 autocmd FileType php noremap <Leader>s :call PhpSortUse()<CR>
-
-" Vim composer ----------------------------------------------------------------
-let g:composer_cmd = "/usr/local/bin/composer"
 
 " Vim less support ------------------------------------------------------------
 " .less to .css , lessc is required.
