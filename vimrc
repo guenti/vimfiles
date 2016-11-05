@@ -1,106 +1,100 @@
 " vim: set ts=4 sts=4 sw=4 et tw=80:
 
 set nocompatible " be iMproved
-filetype off " required for vundle
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " PLUGINS {{{
 
 " Colors begin ----------------------------------------------------------------
 "The stunning, awesome, greatest of all: Solarized. :)
-Plugin 'altercation/vim-colors-solarized.git'
+Plug 'altercation/vim-colors-solarized'
 " The awesome Darcula colorscheme
-Plugin 'blueshirts/darcula'
+Plug 'blueshirts/darcula'
 " The material theme
-Plugin 'jdkanani/vim-material-theme'
+Plug 'jdkanani/vim-material-theme'
 " Colors end ------------------------------------------------------------------
 
 " UI --------------------------------------------------------------------------
 " a better statusline
-Plugin 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 " Airline themes are now in a separated repro
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline-themes'
 " NerdTree
-Plugin 'scrooloose/nerdtree.git'
+Plug 'scrooloose/nerdtree'
 " NerdTree git support
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " NerdTree on tabs
-Plugin 'jistr/vim-nerdtree-tabs'
+Plug 'jistr/vim-nerdtree-tabs'
 " UI end ----------------------------------------------------------------------
 
 " Tools -----------------------------------------------------------------------
 " Required by pdv
-Plugin 'tobyS/vmustache.git'
+Plug 'tobyS/vmustache'
 " git support
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " Git syntax
-Plugin 'tpope/vim-git'
+Plug 'tpope/vim-git'
 " Vim surround
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 " Vim repeat
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 " SuperTab
-Plugin 'ervandew/supertab'
+Plug 'ervandew/supertab'
 " Syntastic
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 " UltiSnips
-Plugin 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
 " Tagbar
-Plugin 'majutsushi/tagbar.git'
+Plug 'majutsushi/tagbar'
 " Another (better) tag plugin
-Plugin 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 " Gundo
-Plugin 'sjl/gundo.vim'
+Plug 'sjl/gundo.vim'
 " Trailing whitespaces
-Plugin 'bronson/vim-trailing-whitespace.git'
+Plug 'bronson/vim-trailing-whitespace'
 " Indent indicators
-Plugin 'ryanoasis/indentLine.git'
+Plug 'ryanoasis/indentLine'
 " Closes and deletes pairs of chars (brackets, parens, quotes, etc).
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 " Tools end -------------------------------------------------------------------
 
 " PHP -------------------------------------------------------------------------
 " Better syntax file
-Plugin '2072/vim-syntax-for-PHP.git'
+Plug '2072/vim-syntax-for-PHP'
 " A newer indet file fpr PHP
-Plugin '2072/PHP-Indenting-for-VIm'
+Plug '2072/PHP-Indenting-for-VIm'
 " Support for PHP namespaces
-Plugin 'arnaud-lb/vim-php-namespace'
+Plug 'arnaud-lb/vim-php-namespace'
 " Improved PHP omni-completion
-Plugin 'shawncplus/phpcomplete.vim'
+Plug 'shawncplus/phpcomplete.vim'
 " PDV
-Plugin 'tobyS/pdv'
+Plug 'tobyS/pdv'
 " PHP end ---------------------------------------------------------------------
 
 " Misc ------------------------------------------------------------------------
 " EditorConfig support (Install the editorconfig-core first!)
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 " Better JSON file syntax
-Plugin 'elzr/vim-json.git'
+Plug 'elzr/vim-json'
 " HTML5 syntax
-Plugin 'othree/html5.vim'
+Plug 'othree/html5.vim'
 " Less support
-Plugin 'groenewege/vim-less'
+Plug 'groenewege/vim-less'
 " Enhanced Javascript support
-Plugin 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript'
 " Add CSS3 syntax support to Vim's built-in syntax/css.vim.
-Plugin 'hail2u/vim-css3-syntax.git'
+Plug 'hail2u/vim-css3-syntax'
 " Misc end --------------------------------------------------------------------
 
-" !!!Always load this Plugin at least!!!
+" !!!Always load this Plug at least!!!
 " Better icons for vim-airline, nerd-tree etc.
-Plugin 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 " PLUGINS END }}}
 
 " Vundle end
-call vundle#end()
+call plug#end()
 
 filetype plugin indent on " required
 
