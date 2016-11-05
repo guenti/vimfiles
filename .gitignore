@@ -1,5 +1,3 @@
-bundle/*
-!bundle/.gitkeep
 plugged/*
 !plugged/.gitkeep
 undodir/*
