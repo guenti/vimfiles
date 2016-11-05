@@ -8,49 +8,54 @@ That's my personal Vim setup with many PHP related Plugins.
 ```bash
 $ mkdir $HOME/.vim
 ```
+[Download plug.vim](https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim)
+and put it in the "autoload" directory.
+
+or
 
 ```bash
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ```bash
-$ vim +PluginInstall +qall
+$ vim +PlugInstall +qall
 ```
 Install one of the [Fonts](https://github.com/ryanoasis/nerd-fonts.git) as recommended for NerdTree and Vim-Airline.
 
 Happy Vim-ing. :)
 
 ## Plugins included
-* Plugin 'altercation/vim-colors-solarized.git'
-* Plugin 'jdkanani/vim-material-theme'
-* Plugin 'blueshirts/darcula'
-* Plugin 'vim-airline/vim-airline'
-* Plugin 'vim-airline/vim-airline-themes'
-* Plugin 'scrooloose/nerdtree.git'
-* Plugin 'Xuyuanp/nerdtree-git-plugin'
-* Plugin 'jistr/vim-nerdtree-tabs'
-* Plugin 'tpope/vim-fugitive'
-* Plugin 'tpope/vim-git'
-* Plugin 'tpope/vim-surround'
-* Plugin 'tpope/vim-repeat'
-* Plugin 'ervandew/supertab'
-* Plugin 'scrooloose/syntastic'
-* Plugin 'SirVer/ultisnips'
-* Plugin 'tobyS/vmustache.git'
-* Plugin 'majutsushi/tagbar.git'
-* Plugin 'ludovicchabant/vim-gutentags'
-* Plugin 'sjl/gundo.vim'
-* Plugin 'bronson/vim-trailing-whitespace.git'
-* Plugin 'ryanoasis/indentLine.git'
-* Plugin 'jiangmiao/auto-pairs'
-* Plugin 'tobyS/pdv.git'
-* Plugin '2072/vim-syntax-for-PHP.git'
-* Plugin '2072/PHP-Indenting-for-VIm'
-* Plugin 'arnaud-lb/vim-php-namespace'
-* Plugin 'shawncplus/phpcomplete.vim'
-* Plugin 'editorconfig/editorconfig-vim'
-* Plugin 'elzr/vim-json.git'
-* Plugin 'othree/html5.vim'
-* Plugin 'groenewege/vim-less'
-* Plugin 'pangloss/vim-javascript'
-* Plugin 'hail2u/vim-css3-syntax.git'
+* Plug 'altercation/vim-colors-solarized.git'
+* Plug 'jdkanani/vim-material-theme'
+* Plug 'blueshirts/darcula'
+* Plug 'vim-airline/vim-airline'
+* Plug 'vim-airline/vim-airline-themes'
+* Plug 'scrooloose/nerdtree.git'
+* Plug 'Xuyuanp/nerdtree-git-plugin'
+* Plug 'jistr/vim-nerdtree-tabs'
+* Plug 'tpope/vim-fugitive'
+* Plug 'tpope/vim-git'
+* Plug 'tpope/vim-surround'
+* Plug 'tpope/vim-repeat'
+* Plug 'ervandew/supertab'
+* Plug 'scrooloose/syntastic'
+* Plug 'SirVer/ultisnips'
+* Plug 'tobyS/vmustache.git'
+* Plug 'majutsushi/tagbar.git'
+* Plug 'ludovicchabant/vim-gutentags'
+* Plug 'sjl/gundo.vim'
+* Plug 'bronson/vim-trailing-whitespace.git'
+* Plug 'ryanoasis/indentLine.git'
+* Plug 'jiangmiao/auto-pairs'
+* Plug 'tobyS/pdv.git'
+* Plug '2072/vim-syntax-for-PHP.git'
+* Plug '2072/PHP-Indenting-for-VIm'
+* Plug 'arnaud-lb/vim-php-namespace'
+* Plug 'shawncplus/phpcomplete.vim'
+* Plug 'editorconfig/editorconfig-vim'
+* Plug 'elzr/vim-json.git'
+* Plug 'othree/html5.vim'
+* Plug 'groenewege/vim-less'
+* Plug 'pangloss/vim-javascript'
+* Plug 'hail2u/vim-css3-syntax.git'
