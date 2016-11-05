@@ -289,9 +289,6 @@ map <C-P> :call pdv#DocumentWithSnip()<CR>
 " EditorConfig support
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
-" LaTeX support
-let g:tex_flavor='latex'
-
 " PLUGIN CONFIGURATION END }}}
 
 " MAPPINGS {{{
