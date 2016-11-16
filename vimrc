@@ -72,6 +72,11 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug 'tobyS/pdv'
 " PHP end ---------------------------------------------------------------------
 
+" Ruby + Rails ----------------------------------------------------------------
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+" Ruby + Rails end ------------------------------------------------------------
+
 " Misc ------------------------------------------------------------------------
 " EditorConfig support (Install the editorconfig-core first!)
 Plug 'editorconfig/editorconfig-vim'
@@ -153,7 +158,7 @@ retab
 
 set t_Co=256
 "let g:solarized_termcolors=256
-set background=light
+set background=dark
 colorscheme solarized
 
 " no backups
@@ -343,6 +348,12 @@ nnoremap <Leader>pb :bprevious<CR>
 nnoremap <Leader>db :bp <BAR> bd #<CR>
 " Show all open buffers (it's more consistent)
 nnoremap <Leader>lb :ls<CR>
+
+" Tabs
+nnoremap <Leader>tn :tabnext<CR>
+nnoremap <Leader>tb :tabprev<CR>
+nnoremap <Leader>td :tabclose<CR>
+nnoremap <Leader>ta :tabnew<CR>
 
 " Open an new (empty) vertical split window and switch over to it.
 nnoremap <Leader>sw :botright vnew<CR><C-w>l
