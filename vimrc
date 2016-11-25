@@ -35,6 +35,10 @@ Plug 'tobyS/vmustache'
 Plug 'tpope/vim-fugitive'
 " Git syntax
 Plug 'tpope/vim-git'
+" Shows a git diff in the 'gutter' (sign column)
+Plug 'airblade/vim-gitgutter'
+" A gitk clone for Vim
+Plug 'gregsexton/gitv'
 " Vim surround
 Plug 'tpope/vim-surround'
 " Vim repeat
@@ -70,12 +74,18 @@ Plug 'arnaud-lb/vim-php-namespace'
 Plug 'shawncplus/phpcomplete.vim'
 " PDV
 Plug 'tobyS/pdv'
+" Better PHP folding
+Plug 'swekaj/php-foldexpr.vim'
 " PHP end ---------------------------------------------------------------------
 
 " Ruby + Rails ----------------------------------------------------------------
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 " Ruby + Rails end ------------------------------------------------------------
+
+" Go lang ---------------------------------------------------------------------
+Plug 'fatih/vim-go'
+" Go lang end -----------------------------------------------------------------
 
 " Misc ------------------------------------------------------------------------
 " EditorConfig support (Install the editorconfig-core first!)
@@ -157,9 +167,8 @@ set expandtab
 retab
 
 set t_Co=256
-"let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
+colorscheme aurora
 
 " no backups
 set nobackup
@@ -206,7 +215,8 @@ let g:SuperTabDefaultCompletionType = '<C-x><C-o>'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_modified = 1
 " Airline theme
-let g:airline_theme = 'solarized'
+"let g:airline_theme = 'solarized'
+let g:airline_theme = 'aurora'
 " whitspace addon
 let g:airline#extensions#whitespace#enabled = 1
 " Enable buffer listing on top
@@ -288,7 +298,6 @@ map <C-P> :call pdv#DocumentWithSnip()<CR>
 
 " EditorConfig support
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
-
 " PLUGIN CONFIGURATION END }}}
 
 " MAPPINGS {{{
