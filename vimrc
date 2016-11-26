@@ -168,7 +168,8 @@ retab
 
 set t_Co=256
 set background=dark
-colorscheme aurora
+"colorscheme aurora
+colorscheme xoria256-pluk
 
 " no backups
 set nobackup
