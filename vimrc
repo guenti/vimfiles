@@ -13,6 +13,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'blueshirts/darcula'
 " The material theme
 Plug 'jdkanani/vim-material-theme'
+" Lucius color scheme
+Plug 'jonathanfilip/vim-lucius'
 " Colors end ------------------------------------------------------------------
 
 " UI --------------------------------------------------------------------------
@@ -76,6 +78,8 @@ Plug 'shawncplus/phpcomplete.vim'
 Plug 'tobyS/pdv'
 " Better PHP folding
 Plug 'swekaj/php-foldexpr.vim'
+" PHP-CS-FIXER support
+Plug 'stephpy/vim-php-cs-fixer'
 " PHP end ---------------------------------------------------------------------
 
 " Ruby + Rails ----------------------------------------------------------------
@@ -168,8 +172,9 @@ retab
 
 set t_Co=256
 set background=dark
-"colorscheme aurora
-colorscheme xoria256-pluk
+colorscheme aurora
+"colorscheme xoria256-pluk
+"colorscheme lucius
 
 " no backups
 set nobackup
