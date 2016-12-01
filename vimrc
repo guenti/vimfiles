@@ -31,6 +31,8 @@ Plug 'tobyS/vmustache'
 Plug 'tpope/vim-fugitive'
 " Git syntax
 Plug 'tpope/vim-git'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-projectionist'
 " Shows a git diff in the 'gutter' (sign column)
 Plug 'airblade/vim-gitgutter'
 " A gitk clone for Vim
@@ -74,6 +76,8 @@ Plug 'tobyS/pdv'
 Plug 'swekaj/php-foldexpr.vim'
 " PHP-CS-FIXER support
 Plug 'guenti/vim-php-cs-fixer'
+" Composer support
+Plug 'noahfrederick/vim-composer'
 " PHP end ---------------------------------------------------------------------
 
 " Ruby + Rails ----------------------------------------------------------------
@@ -319,10 +323,6 @@ nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 
-" Open/close all folds
-nnoremap <Leader>f zR
-nnoremap <Leader>cf zM
-
 " Toggle line numbers
 nnoremap <Leader># :set nu!<CR>
 
@@ -354,7 +354,7 @@ map <Leader>es :sp <C-r>=expand("%:p:h") . "/" <CR>
 map <Leader>ev :vsp <C-r>=expand("%:p:h") . "/" <CR>
 
 " Open a new empty buffer
-nnoremap <Leader>bu :enew<CR>
+nnoremap <Leader>bn :enew<CR>
 " Move to the next buffer
 nnoremap <Leader>nb :bnext<CR>
 " Move to the previous buffer
@@ -372,9 +372,6 @@ nnoremap <Leader>ta :tabnew<CR>
 
 " Open an new (empty) vertical split window and switch over to it.
 nnoremap <Leader>sw :botright vnew<CR><C-w>l
-
-" Mapping fold tag (usefull with HTML/XML and so on)
-nnoremap <Leader>ft Vatzf
 
 " Moving around split windows
 nnoremap <C-h> <C-w>h
