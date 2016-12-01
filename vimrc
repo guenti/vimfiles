@@ -9,12 +9,6 @@ call plug#begin('~/.vim/plugged')
 " Colors begin ----------------------------------------------------------------
 "The stunning, awesome, greatest of all: Solarized. :)
 Plug 'altercation/vim-colors-solarized'
-" The awesome Darcula colorscheme
-Plug 'blueshirts/darcula'
-" The material theme
-Plug 'jdkanani/vim-material-theme'
-" Lucius color scheme
-Plug 'jonathanfilip/vim-lucius'
 " Colors end ------------------------------------------------------------------
 
 " UI --------------------------------------------------------------------------
@@ -79,7 +73,7 @@ Plug 'tobyS/pdv'
 " Better PHP folding
 Plug 'swekaj/php-foldexpr.vim'
 " PHP-CS-FIXER support
-Plug 'stephpy/vim-php-cs-fixer'
+Plug 'guenti/vim-php-cs-fixer'
 " PHP end ---------------------------------------------------------------------
 
 " Ruby + Rails ----------------------------------------------------------------
@@ -173,8 +167,6 @@ retab
 set t_Co=256
 set background=dark
 colorscheme aurora
-"colorscheme xoria256-pluk
-"colorscheme lucius
 
 " no backups
 set nobackup
@@ -234,6 +226,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 map <F4> :NERDTreeToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=0
 let g:nerdtree_tabs_open_on_gui_startup = 0
+let g:NERDTreeShowHidden=1
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Gundo -----------------------------------------------------------------------
@@ -304,6 +297,13 @@ map <C-P> :call pdv#DocumentWithSnip()<CR>
 
 " EditorConfig support
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" php-cs-fixer
+" If you want to define specific fixers:
+"let g:php_cs_fixer_fixers_list = "linefeed,short_tag,indentation"
+let g:php_cs_fixer_enable_default_mapping = 1     	" Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                    	" Call command with dry-run option
+let g:php_cs_fixer_verbose = 0                    	" Return the output of command if 1, else an inline information.
 " PLUGIN CONFIGURATION END }}}
 
 " MAPPINGS {{{
