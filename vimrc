@@ -85,10 +85,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 " Ruby + Rails end ------------------------------------------------------------
 
-" Go lang ---------------------------------------------------------------------
-Plug 'fatih/vim-go'
-" Go lang end -----------------------------------------------------------------
-
 " Misc ------------------------------------------------------------------------
 " EditorConfig support (Install the editorconfig-core first!)
 Plug 'editorconfig/editorconfig-vim'
