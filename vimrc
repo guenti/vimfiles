@@ -35,6 +35,8 @@ Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 " A gitk clone for Vim
 Plug 'gregsexton/gitv'
+" A 3 way merge tool
+Plug 'sjl/splice.vim'
 " Vim surround
 Plug 'tpope/vim-surround'
 " Vim repeat
