@@ -31,8 +31,6 @@ Plug 'tobyS/vmustache'
 Plug 'tpope/vim-fugitive'
 " Git syntax
 Plug 'tpope/vim-git'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-projectionist'
 " Shows a git diff in the 'gutter' (sign column)
 Plug 'airblade/vim-gitgutter'
 " A gitk clone for Vim
@@ -66,8 +64,6 @@ Plug 'jiangmiao/auto-pairs'
 Plug '2072/vim-syntax-for-PHP'
 " A newer indet file fpr PHP
 Plug '2072/PHP-Indenting-for-VIm'
-" Support for PHP namespaces
-Plug 'arnaud-lb/vim-php-namespace'
 " Improved PHP omni-completion
 Plug 'shawncplus/phpcomplete.vim'
 " PDV
@@ -76,8 +72,6 @@ Plug 'tobyS/pdv'
 Plug 'swekaj/php-foldexpr.vim'
 " PHP-CS-FIXER support
 Plug 'guenti/vim-php-cs-fixer'
-" Composer support
-Plug 'noahfrederick/vim-composer'
 " PHP end ---------------------------------------------------------------------
 
 " Ruby + Rails ----------------------------------------------------------------
@@ -264,25 +258,6 @@ let g:UltiSnipsSnippetsDir = $HOME . "/.vim/ultisnippets/"
 let g:UltiSnipsSnippetDirectories = ["ultisnippets"]
 let g:UltiSnipsExpandTrigger = "<Tab>"
 let g:UltiSnipsListSnippets = "<M-Tab>"
-
-" PHP namespaces --------------------------------------------------------------
-" Automatically adds the corresponding use statement for the class under the cursor.
-function! IPhpInsertUse()
-    call PhpInsertUse()
-    call feedkeys('a',  'n')
-endfunction
-autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
-autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
-" Expands the class name under the cursor to its fully qualified name.
-function! IPhpExpandClass()
-    call PhpExpandClass()
-    call feedkeys('a', 'n')
-endfunction
-autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
-autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
-" Sort existing use statements alphabetically
-autocmd FileType php inoremap <Leader>s <Esc>:call PhpSortUse()<CR>
-autocmd FileType php noremap <Leader>s :call PhpSortUse()<CR>
 
 " Vim less support ------------------------------------------------------------
 " .less to .css , lessc is required.
