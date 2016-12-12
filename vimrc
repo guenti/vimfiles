@@ -220,9 +220,10 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " NERDTree --------------------------------------------------------------------
 map <F4> :NERDTreeToggle<CR>
-let g:nerdtree_tabs_open_on_console_startup=0
-let g:nerdtree_tabs_open_on_gui_startup = 0
-let g:NERDTreeShowHidden=1
+let g:nerdtree_tabs_open_on_console_startup = 0
+let g:nerdtree_tabs_open_on_gui_startup = 1
+let g:NERDTreeShowHidden = 1
+" Close vim when only a NerdTree window exists
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Gundo -----------------------------------------------------------------------
