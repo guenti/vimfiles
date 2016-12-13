@@ -198,6 +198,9 @@ set gdefault " Setting the /g param to default. Less typing :)
 " I like to open help in a vertical split
 au BufRead,BufEnter */doc/* wincmd L
 
+" Python stuff
+let python_highlight_all = 1
+
 " BASICS END }}}
 
 " PLUGIN CONFIGURATION {{{
