@@ -360,17 +360,24 @@ nnoremap <C-l> <C-w>l
 
 " FILETYPE SETTINGS {{{
 
+" Python
+au BufNewFile,BufRead *.py, *.php
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
+" Misc files
+au BufNewFile,BufRead *.js, *.html, *.xml, *.css, *.yaml, *.rb, *.sql
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
 " Indentation of these languages is fussy over tabs and spaces
 au FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
-au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-au FileType php setlocal ts=4 sts=4 sw=4 expandtab
-au FileType css setlocal ts=2 sts=2 sw=2 expandtab
-au FileType html setlocal ts=2 sts=2 sw=2 expandtab
-au FileType xml setlocal ts=2 sts=2 sw=2 expandtab
-au FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
-au FileType pgsql setlocal ts=2 sts=2 sw=2 expandtab
-au FileType python setlocal ts=8 sts=8 sw=8 expandtab
-au FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 
 " Git commit messages
 au Filetype gitcommit setlocal nospell textwidth=72
