@@ -254,6 +254,7 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 let g:syntastic_disabled_filetypes=['phtml']
 " phpmd will be used in a CI env
 let g:syntastic_php_checkers = ['php', 'phpcs']
+let g:syntastic_php_phpcs_args='--standard=PSR2 -n'
 nnoremap <F5> :SyntasticToggleMode<CR>
 nnoremap <F6> :SyntasticCheck<CR>
 
