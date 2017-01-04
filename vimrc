@@ -212,7 +212,6 @@ let g:SuperTabDefaultCompletionType = '<C-x><C-o>'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_modified = 1
 " Airline theme
-"let g:airline_theme = 'solarized'
 let g:airline_theme = 'aurora'
 " whitspace addon
 let g:airline#extensions#whitespace#enabled = 1
@@ -224,7 +223,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 " NERDTree --------------------------------------------------------------------
 map <F4> :NERDTreeToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup = 0
-let g:nerdtree_tabs_open_on_gui_startup = 1
+let g:nerdtree_tabs_open_on_gui_startup = 0
 let g:NERDTreeShowHidden = 1
 " Close vim when only a NerdTree window exists
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

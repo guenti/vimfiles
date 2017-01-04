@@ -1,4 +1,4 @@
-Copyright (c) 2016 Mario Guenterberg
+Copyright (c) 2016-2017 Mario Guenterberg
 
 All rights reserved.
 
