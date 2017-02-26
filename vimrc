@@ -16,12 +16,6 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 " Airline themes are now in a separated repro
 Plug 'vim-airline/vim-airline-themes'
-" NerdTree
-Plug 'scrooloose/nerdtree'
-" NerdTree git support
-Plug 'Xuyuanp/nerdtree-git-plugin'
-" NerdTree on tabs
-Plug 'jistr/vim-nerdtree-tabs'
 " UI end ----------------------------------------------------------------------
 
 " Tools -----------------------------------------------------------------------
@@ -220,13 +214,16 @@ let g:airline#extensions#tabline#enabled = 1
 " Show only filenames on top
 let g:airline#extensions#tabline#fnamemod = ':t'
 
-" NERDTree --------------------------------------------------------------------
-map <F4> :NERDTreeToggle<CR>
-let g:nerdtree_tabs_open_on_console_startup = 0
-let g:nerdtree_tabs_open_on_gui_startup = 0
-let g:NERDTreeShowHidden = 1
-" Close vim when only a NerdTree window exists
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" netrw --------------------------------------------------------------------
+map <F4> :Lexplore<CR>
+" set the list view to long
+let g:netrw_liststyle = 3
+" remove the banner
+let g:netrw_banner = 0
+" open a file in the previous window
+let g:netrw_browse_split = 4
+" set the width of the window
+"let g:netrw_winsize = 20
 
 " Gundo -----------------------------------------------------------------------
 nnoremap <F8> :GundoToggle<CR>
@@ -397,6 +394,7 @@ au FileType php setlocal omnifunc=phpcomplete#CompletePHP
  " ABBREVIATIONS {{{
 
 iab Xmg Mario Guenterberg <mg@poolbyte-solutions.de>
+iab Xzmg Mario Guenterbeg <mario.guenterberg@zalando-operations.com>
 iab Xguenti Mario Guenterberg <mario.guenterberg@googlemail.com>
 iab Xvim vim: set ts=4 sts=4 sw=4 et tw=80:
 
