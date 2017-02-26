@@ -27,6 +27,7 @@ Happy Vim-ing. :)
 
 ## Plugins included
 * Plug 'altercation/vim-colors-solarized'
+* Plug 'NLKNguyen/papercolor-theme'
 * Plug 'vim-airline/vim-airline'
 * Plug 'vim-airline/vim-airline-themes'
 * Plug 'tobyS/vmustache'

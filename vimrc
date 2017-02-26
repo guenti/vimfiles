@@ -7,8 +7,10 @@ call plug#begin('~/.vim/plugged')
 " PLUGINS {{{
 
 " Colors begin ----------------------------------------------------------------
-"The stunning, awesome, greatest of all: Solarized. :)
+" The stunning, awesome, greatest of all: Solarized. :)
 Plug 'altercation/vim-colors-solarized'
+" Anonther great color scheme
+Plug 'NLKNguyen/papercolor-theme'
 " Colors end ------------------------------------------------------------------
 
 " UI --------------------------------------------------------------------------
@@ -155,8 +157,9 @@ set expandtab
 retab
 
 set t_Co=256
-set background=dark
-colorscheme aurora
+set background=light
+"colorscheme aurora
+colorscheme papercolor
 
 " no backups
 set nobackup
@@ -206,7 +209,8 @@ let g:SuperTabDefaultCompletionType = '<C-x><C-o>'
 let g:airline_powerline_fonts = 1
 let g:airline_detect_modified = 1
 " Airline theme
-let g:airline_theme = 'aurora'
+"let g:airline_theme = 'aurora'
+let g:airline_theme = 'papercolor'
 " whitspace addon
 let g:airline#extensions#whitespace#enabled = 1
 " Enable buffer listing on top
