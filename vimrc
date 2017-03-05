@@ -158,8 +158,7 @@ retab
 
 set t_Co=256
 set background=light
-"colorscheme aurora
-colorscheme papercolor
+colorscheme PaperColor
 
 " no backups
 set nobackup
